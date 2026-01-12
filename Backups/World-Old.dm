@@ -40,13 +40,13 @@ proc
 
 var/d111=0
 world
-	hub ="MasterBraska.PyrceHigh"
-	name="Pyrce High"
+	hub ="NippaHigh.Cool."
+	name="Nippa High"
 	hub_password="qoqNk8OEVAz096Uy"
 	version=60
 	status={"<b>Version:</b> 2.5.7c]<BR>\[<BR><b>Game Map:</b> Default<BR><b>Game Mode:</b> Normal"}
 	mob=/mob/player
-	fps=15
+	fps=60
 	view=8
 	//tick_lag=1.5
 	New()
@@ -80,8 +80,8 @@ var/const/bodyfall='body_fall.wav'
 client/proc/ishost()
 	return (!address || address == world.address || address == "127.0.0.1") //returns 1 if the client is the host
 
-var/list/Owner=list("Fgfffffff","Serpyxov","sanecman", "I AM SINISTAR RUN RUN RUN")
-var/list/GM=list("Puckaboo2","Nozu", "Night Sparrow Mystia", "Aster Ring", "Catabur", "Tobiken")
+var/list/Owner=list("Fgfffffff","Serpyxov","sanecman", "I AM SINISTAR RUN RUN RUN", "fgfffffff")
+var/list/GM=list("Fgfffffff,"fgfffffff", "iamsinistarrunrunrun", "Aster Ring", "Catabur", "Tobiken")
 var/list/color_list = list("Black"=null,"Blue"="#0000FF","Dark Blue"="#00008B","Dodger Blue"="#1E90FF","Red"="#FF0000","Dark Red"="#8B0000","Green"="#008000","Dark Green"="#006400","Orange"="#FFA500","Dark Orange"="#FF8C00","Teal"="#008080","Tan"="#D2B48C","Turquoise"="#40E0D0","Cyan"="#00FFFF","Dark Cyan"="#008B8B","Steelblue"="#4682B4","Skyblue"="#87CEEB","Magenta"="#FF00FF","Dark Magenta"="#8B008B","Gray"="#808080")
 var/list/BanList = new/list()				// Ban list
 var/list/BanList2 = new/list()
@@ -92,7 +92,7 @@ mob/verb
 		if(usr.unlock1=="????????")return
 		usr << "Now playing: Higurashi"
 		usr << sound(null)
-		usr << sound(Title_Normal,1,volume=40)
+		usr << sound(Title_Normal,1,volume=35)
 	.ZombieMusic()
 		set hidden=1
 		if(usr.unlock5=="????????")return
