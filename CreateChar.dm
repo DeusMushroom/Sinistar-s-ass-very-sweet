@@ -74,8 +74,8 @@ mob/verb
 			winset(usr,"fmgndr","is-checked=true")
 		winshow(usr,"charcreation",1)
 		winset(src,"charcreation","size=240x240")
-		winset(src,"charcreation","can_resize=true")
-		winset(src,"charcreation","can_close=true")
+		winset(src,"charcreation","can_resize=1")
+		winset(src,"charcreation","can_close=1")
 		winset(usr,"usrname","Text=\"Name: [usr.charname]\"")
 		var/jutsus = 0
 		//usr << output(null, "HairList:0,0")
