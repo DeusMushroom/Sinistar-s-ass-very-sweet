@@ -554,7 +554,7 @@ mob/verb
 	browsehelp()
 		set hidden=1
 		winset(usr,"paner","left=browserpane")
-		browse_link("http://pyrcehigh.wikidot.com/",usr)
+		browse_link("https://pikabu.ru/",usr)
 	TurnPage()
 		set hidden = 1
 		winshow(usr,"dnpage",1)
