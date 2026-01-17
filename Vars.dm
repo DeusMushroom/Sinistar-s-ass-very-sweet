@@ -14,8 +14,11 @@ mob
 		if(src.client)
 			src.RestoreUser()
 mob/client/see_infrared=1
-var/const/Title_Secret='titlesecret.ogg'
+var/const/Title_Secret='zicadi.ogg'
 var/const/Title_Ghost='title_ghost.ogg'
+var/const/Title_Tetradka='tetradka.ogg'
+var/const/Title_Zombo='dark.ogg'
+var/const/Title_Devocka='vedma.ogg'
 mob/proc/GameTitle()
 	if(src.client)
 		src << sound(null)
@@ -30,27 +33,27 @@ mob/proc/GameTitle()
 		else if(gamemode=="Normal" || gamemode=="Extended")
 			src.loc=locate(/turf/Locations/Title)
 			if(src.mutemusic==1)goto enderz
-			var/sound/S = sound(Title_Normal, 1, 0, 100, src.mastervolume ) //Output the sound to the client with the desired volume
+			var/sound/S = sound(Title_Secret, 1, 0, 100, src.mastervolume ) //Output the sound to the client with the desired volume
 			src<<S
 			src.playi=S
 			:enderz
 		else if(gamemode=="Zombie")
 			if(src.mutemusic==1)goto enderz
-			var/sound/S = sound(Title_Zombie, 1, 0, 100, src.mastervolume ) //Output the sound to the client with the desired volume
+			var/sound/S = sound(Title_Zombo, 1, 0, 100, src.mastervolume ) //Output the sound to the client with the desired volume
 			src<<S
 			src.playi=S
 			:enderz
 			src.loc=locate(/turf/Locations/TitleZ)
 		else if(gamemode=="Death Note"||gamemode=="Death Note Classic")
 			if(src.mutemusic==1)goto enderz
-			var/sound/S = sound(Title_DN, 1, 0, 100, src.mastervolume ) //Output the sound to the client with the desired volume
+			var/sound/S = sound(Title_Tetradka, 1, 0, 100, src.mastervolume ) //Output the sound to the client with the desired volume
 			src<<S
 			src.playi=S
 			:enderz
 			src.loc=locate(/turf/Locations/TitleDN)
 		else if(gamemode=="Witch")
 			if(src.mutemusic==1)goto enderz
-			var/sound/S = sound(Title_Witch, 1, 0, 100, src.mastervolume ) //Output the sound to the client with the desired volume
+			var/sound/S = sound(Title_Devocka, 1, 0, 100, src.mastervolume ) //Output the sound to the client with the desired volume
 			src<<S
 			src.playi=S
 			:enderz
