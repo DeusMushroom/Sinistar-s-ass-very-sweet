@@ -16,7 +16,7 @@ mob
 		ClientConfig()
 			set category=null
 			set hidden=1
-			winset(src,"PlayerConfig","size=253x245")
+			winset(src,"PlayerConfig","size=387x459")
 			winshow(src,"PlayerConfig",1)
 
 dmp_reader

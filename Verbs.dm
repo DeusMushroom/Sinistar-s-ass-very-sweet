@@ -4,25 +4,25 @@ mob/verb/.delag()
 	winset(usr,null,"command='.configure delay 0'")
 	usr << "Network delay set to 0."
 mob/verb
-	ShiftNorth()
+	CTRLNorth()
 		set hidden = 1
 		if(usr.frozen==1)return
 		usr.dir=NORTH
-	ShiftSouth()
+	CTRLSouth()
 		set hidden = 1
 		if(usr.frozen==1)return
 		usr.dir=SOUTH
-	ShiftWest()
+	CTRLWest()
 		set hidden = 1
 		if(usr.frozen==1)return
 		usr.dir=WEST
-	ShiftEast()
+	CTRLEast()
 		set hidden = 1
 		if(usr.frozen==1)return
 		usr.dir=EAST
 mob/verb/viewmotd()
 	set hidden = 1
-	usr<<browse(motd,"window=Motd;size=320x420;can_close=1;can_resize=1;can_minimize=1")
+	usr<<browse(motd,"window=Motd;can_close=1;can_resize=1;can_minimize=1")
 mob/verb/usepda()
 	set hidden = 1
 	if(usr.playing==0||usr.shinigami==1||usr.shinigami==1)return
@@ -41,6 +41,8 @@ mob/ingame/verb
 		//if(usr.shinigami==1)return
 		if(usr.playing==0)return
 		if(T=="")return
+		if(usr.isGhost==1)return
+		if(usr.slender==1)return
 		if(usr.beatrice==1&&usr.icon_state=="butterfly")return
 		if(usr.zombie==1)
 			var/rander=rand(1,2)
@@ -70,6 +72,7 @@ mob/ingame/verb
 		//if(usr.shinigami==1)return
 		if(usr.beatrice==1&&usr.icon_state=="butterfly")return
 		if(usr.playing==0)return
+		if(usr.isGhost==1)return
 		var/len=length(T)
 		if(len>500)
 			T=copytext(T,1,500)
@@ -401,7 +404,7 @@ mob/verb
 		usr.client.command_text="Watcher "
 	changechatter()
 		set hidden = 1
-		usr.client.command_text="Chat "
+		usr.client.command_text="OOC "
 	padbutton1()
 		set hidden = 1
 		usr << output("1","padout")
@@ -572,8 +575,12 @@ mob/verb
 		usr << sound(null)
 		usr << "Music stopped"
 		usr.playi=null
-	Chat(T as text)
-		//set name="Chat:"
+	Who()
+		for(var/mob/A in world)
+			if(A.client)
+				usr << "[A.key]"
+	OOC(T as text)
+		//set name="OOC:"
 		if(usr.key in mutelist)
 			usr << "You're muted, sorry."
 			return

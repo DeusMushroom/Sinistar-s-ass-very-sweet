@@ -795,8 +795,8 @@ mob/GM/verb
 		set category="GM"
 		var/T=input(usr,"Please enter an announcment, Remember, don't abuse or over use this.") as text
 		if(T=="")return
-		world << "<center><font color=white>.¤°¨°¤.¤ <font color=blue>GM-[usr.key] Announces<font color=white> ¤.¤°¨°¤.</center>"
-		world << "<center><font color=white>.¤°¨°¤.¤ <font color=blue>[T]<font color=white> ¤.¤°¨°¤.</center>"
+		world << "<center><font color=white>.ï¿½ï¿½ï¿½ï¿½ï¿½.ï¿½ <font color=blue>GM-[usr.key] Announces<font color=white> ï¿½.ï¿½ï¿½ï¿½ï¿½ï¿½.</center>"
+		world << "<center><font color=white>.ï¿½ï¿½ï¿½ï¿½ï¿½.ï¿½ <font color=blue>[T]<font color=white> ï¿½.ï¿½ï¿½ï¿½ï¿½ï¿½.</center>"
 	Boot_From_Round()
 		set category = "GM"
 		var/list/playerz=new/list()
@@ -1184,17 +1184,14 @@ mob/owner/verb
 	Admin_Announce(T as text)
 		set category="Admin"
 		if(T=="")return
-		world << "<center><font color=white>.¤°¨°¤.¤ <font color=red>Admin-[usr.key] Announces<font color=white> ¤.¤°¨°¤.</center>"
-		world << "<center><font color=white>.¤°¨°¤.¤ <font color=red>[T]<font color=white> ¤.¤°¨°¤.</center>"
+		world << "<center><font color=white>.ï¿½ï¿½ï¿½ï¿½ï¿½.ï¿½ <font color=red>Admin-[usr.key] Announces<font color=white> ï¿½.ï¿½ï¿½ï¿½ï¿½ï¿½.</center>"
+		world << "<center><font color=white>.ï¿½ï¿½ï¿½ï¿½ï¿½.ï¿½ <font color=red>[T]<font color=white> ï¿½.ï¿½ï¿½ï¿½ï¿½ï¿½.</center>"
 	Check_IPs()
 		set category = "Admin"
 		usr << "World Address: [world.internet_address]"
 		for(var/mob/A in world)
 			if(A.client)
 				usr << "[A.key]--[A.client.address]"
-	Bot_Say(T as text)
-		set category = "Admin"
-		world << "[time2text(world.timeofday, "MMM hh mm ss")] <b><font color=aqua>[lightbot]</b> </font>[T]"
 	Boot_From_Round()
 		set category = "Admin"
 		var/list/playerz=new/list()

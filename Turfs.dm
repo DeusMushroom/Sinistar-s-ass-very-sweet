@@ -3526,6 +3526,7 @@ obj/weapons
 		icon_state="knife"
 		msgtake="stabs"
 		var/descp="A sharp knife, probably used for preparing food."
+		details="A sharp knife, probably used for preparing food."
 		bloodweapon=0
 		dmgtake=8
 		stamtake=6

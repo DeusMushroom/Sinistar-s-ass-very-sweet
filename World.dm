@@ -80,7 +80,7 @@ var/const/bodyfall='body_fall.wav'
 client/proc/ishost()
 	return (!address || address == world.address || address == "127.0.0.1") //returns 1 if the client is the host
 
-var/list/Owner=list("Fgfffffff","sanecman","I AM SINISTAR RUN RUN RUN", "Serpyxov")
+var/list/Owner=list("Fgfffffff","sanecman","I AM SINISTAR RUN RUN RUN", "Serpyxov", "Ilmir037")
 var/list/GM=list("Puckaboo2","Nozu", "Night Sparrow Mystia", "Aster Ring", "Catabur", "Tobiken")
 var/list/color_list = list("Black"=null,"Blue"="#0000FF","Dark Blue"="#00008B","Dodger Blue"="#1E90FF","Red"="#FF0000","Dark Red"="#8B0000","Green"="#008000","Dark Green"="#006400","Orange"="#FFA500","Dark Orange"="#FF8C00","Teal"="#008080","Tan"="#D2B48C","Turquoise"="#40E0D0","Cyan"="#00FFFF","Dark Cyan"="#008B8B","Steelblue"="#4682B4","Skyblue"="#87CEEB","Magenta"="#FF00FF","Dark Magenta"="#8B008B","Gray"="#808080")
 var/list/BanList = new/list()				// Ban list
