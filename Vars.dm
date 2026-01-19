@@ -19,6 +19,7 @@ var/const/Title_Ghost='title_ghost.ogg'
 var/const/Title_Tetradka='tetradka.ogg'
 var/const/Title_Zombo='dark.ogg'
 var/const/Title_Devocka='vedma.ogg'
+var/const/Title_Doppel='11.ogg'
 mob/proc/GameTitle()
 	if(src.client)
 		src << sound(null)
@@ -60,7 +61,7 @@ mob/proc/GameTitle()
 			src.loc=locate(/turf/Locations/TitleWitch)
 		else if(gamemode=="Doppelganger")
 			if(src.mutemusic==1)goto enderz
-			var/sound/S = sound('Title_DG.ogg', 1, 0, 100, src.mastervolume ) //Output the sound to the client with the desired volume
+			var/sound/S = sound(Title_Doppel, 1, 0, 100, src.mastervolume ) //Output the sound to the client with the desired volume
 			src<<S
 			src.playi=S
 			:enderz
