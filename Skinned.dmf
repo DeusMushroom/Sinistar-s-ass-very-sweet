@@ -60,6 +60,9 @@ macro "macro"
 		name = "A+REP"
 		command = ".west"
 	elem 
+		name = "C"
+		command = "Run"
+	elem 
 		name = "D+REP"
 		command = ".east"
 	elem 
@@ -203,18 +206,12 @@ window "Autohost"
 		is-pane = true
 		image-mode = center
 		keep-aspect = true
-		outer-size = 282x309
-		outer-pos = 434,0
-		inner-size = 262x289
-		inner-pos = 10,10
-		screen-size = 1920x1128
 	elem "button44"
 		type = BUTTON
 		pos = 177,200
 		size = 36x20
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "is-checked"
 		text = ""
 		command = "Hostautopolldelay"
@@ -224,7 +221,6 @@ window "Autohost"
 		size = 40x20
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "is-checked"
 		text = ""
 		command = "Hosttoggleautopoll"
@@ -234,7 +230,6 @@ window "Autohost"
 		size = 36x20
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "is-checked"
 		text = ""
 		command = "Hostautohostdelay"
@@ -244,7 +239,6 @@ window "Autohost"
 		size = 40x20
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "is-checked"
 		text = ""
 		command = "Hosttoggleautohost"
@@ -257,7 +251,6 @@ window "Autohost"
 		font-family = "Comic Sans MS"
 		font-size = 13
 		text-color = #ffffff
-		background-color = none
 		is-transparent = true
 		saved-params = ""
 		text = "Auto-Host Settings"
@@ -270,7 +263,6 @@ window "Autohost"
 		font-family = "Comic Sans MS"
 		font-size = 8
 		text-color = #ffffff
-		background-color = none
 		is-transparent = true
 		border = sunken
 		saved-params = ""
@@ -286,7 +278,6 @@ window "Autohost"
 		font-family = "Comic Sans MS"
 		font-size = 9
 		text-color = #ffffff
-		background-color = none
 		is-disabled = true
 		saved-params = ""
 		text = "  Change Auto-Poll Delay"
@@ -301,7 +292,6 @@ window "Autohost"
 		font-family = "Comic Sans MS"
 		font-size = 8
 		text-color = #ffffff
-		background-color = none
 		is-transparent = true
 		border = sunken
 		saved-params = ""
@@ -317,7 +307,6 @@ window "Autohost"
 		font-family = "Comic Sans MS"
 		font-size = 9
 		text-color = #ffffff
-		background-color = none
 		is-disabled = true
 		saved-params = ""
 		text = "Toggle Auto-Poll"
@@ -331,7 +320,6 @@ window "Autohost"
 		font-family = "Comic Sans MS"
 		font-size = 8
 		text-color = #ffffff
-		background-color = none
 		is-transparent = true
 		border = sunken
 		saved-params = ""
@@ -347,7 +335,6 @@ window "Autohost"
 		font-family = "Comic Sans MS"
 		font-size = 9
 		text-color = #ffffff
-		background-color = none
 		is-disabled = true
 		saved-params = ""
 		text = "  Change Auto-Host Delay"
@@ -362,7 +349,6 @@ window "Autohost"
 		font-family = "Comic Sans MS"
 		font-size = 8
 		text-color = #ffffff
-		background-color = none
 		is-transparent = true
 		border = sunken
 		saved-params = ""
@@ -378,7 +364,6 @@ window "Autohost"
 		font-family = "Comic Sans MS"
 		font-size = 9
 		text-color = #ffffff
-		background-color = none
 		is-disabled = true
 		saved-params = ""
 		text = "Toggle Auto-Host"
@@ -1325,11 +1310,17 @@ window "PlayerConfig"
 		size = 387x459
 		anchor1 = -1,-1
 		anchor2 = -1,-1
+		background-color = none
 		is-visible = false
 		saved-params = "pos;is-minimized;is-maximized"
 		title = "Client Settings"
 		statusbar = false
 		can-resize = false
+		outer-size = 409x515
+		outer-pos = 434,0
+		inner-size = 387x459
+		inner-pos = 11,45
+		screen-size = 1920x1128
 	elem "tab3"
 		type = TAB
 		pos = 0,0
@@ -1398,8 +1389,8 @@ window "Profileconfig"
 window "TheMainWin"
 	elem "TheMainWin"
 		type = MAIN
-		pos = 434,0
-		size = 1278x440
+		pos = 112,0
+		size = 1786x834
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		background-color = #000000
@@ -1408,17 +1399,17 @@ window "TheMainWin"
 		title = "Dream Seeker"
 		macro = "macro"
 		menu = "menu"
-		outer-size = 1300x551
-		outer-pos = 434,0
-		inner-size = 1278x440
+		outer-size = 1808x945
+		outer-pos = 112,0
+		inner-size = 1786x834
 		inner-pos = 11,75
 		screen-size = 1920x1128
 	elem "input"
 		type = INPUT
-		pos = 0,408
-		size = 1080x32
-		anchor1 = 0,95
-		anchor2 = -1,-1
+		pos = 0,816
+		size = 1576x30
+		anchor1 = 0,98
+		anchor2 = 86,100
 		font-family = "monospace"
 		font-size = 12
 		text-color = #ff2600
@@ -1428,8 +1419,8 @@ window "TheMainWin"
 		saved-params = ""
 	elem "mainwin"
 		type = CHILD
-		pos = 0,-8
-		size = 1278x416
+		pos = -2,-16
+		size = 1786x831
 		anchor1 = 0,0
 		anchor2 = 100,95
 		background-color = #002080
@@ -1441,12 +1432,14 @@ window "TheMainWin"
 		lock = left
 	elem "worder"
 		type = CHILD
-		pos = 1080,408
-		size = 200x32
-		anchor1 = 0,95
-		anchor2 = -1,-1
+		pos = 1576,816
+		size = 208x30
+		anchor1 = 86,98
+		anchor2 = 100,100
 		background-color = #000000
+		border = line
 		saved-params = "splitter"
+		left = "words"
 		is-vert = false
 		show-splitter = false
 
@@ -1466,6 +1459,11 @@ window "Volume"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
+		outer-size = 407x479
+		outer-pos = 434,0
+		inner-size = 387x459
+		inner-pos = 10,10
+		screen-size = 1920x1128
 	elem "label12"
 		type = LABEL
 		pos = 60,8
@@ -1604,6 +1602,11 @@ window "charcreation"
 		can-minimize = false
 		can-resize = false
 		image-mode = center
+		outer-size = 822x856
+		outer-pos = 434,0
+		inner-size = 800x800
+		inner-pos = 11,45
+		screen-size = 1920x1128
 	elem "label4"
 		type = LABEL
 		pos = 344,648
@@ -1612,6 +1615,7 @@ window "charcreation"
 		anchor2 = -1,-1
 		font-size = 10
 		text-color = #ffffff
+		background-color = none
 		is-transparent = true
 		saved-params = ""
 		text = "Selected slot will be used when joining the round."
@@ -1670,6 +1674,7 @@ window "charcreation"
 		anchor2 = -1,-1
 		font-size = 20
 		text-color = #ffffff
+		background-color = none
 		is-transparent = true
 		saved-params = ""
 		text = "Gender"
@@ -1723,6 +1728,7 @@ window "charcreation"
 		anchor2 = -1,-1
 		font-family = "Comic Sans MS"
 		font-size = 8
+		background-color = none
 		border = sunken
 		saved-params = "is-checked"
 		text = "Change Hair Color"
@@ -1736,6 +1742,7 @@ window "charcreation"
 		anchor2 = -1,-1
 		font-size = 10
 		text-color = #ffffff
+		background-color = none
 		is-transparent = true
 		saved-params = ""
 		text = "Charcter preview"
@@ -1747,6 +1754,7 @@ window "charcreation"
 		anchor2 = -1,-1
 		font-size = 10
 		text-color = #ffffff
+		background-color = none
 		is-transparent = true
 		saved-params = ""
 		text = "Provide a first and last name."
@@ -1788,6 +1796,7 @@ window "charcreation"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		text-color = #ffffff
+		background-color = none
 		saved-params = "is-checked"
 		text = "______"
 		command = "setcharname"
@@ -1812,7 +1821,6 @@ window "chatterpane"
 		size = 387x459
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "pos;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -1820,11 +1828,6 @@ window "chatterpane"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
-		outer-size = 407x479
-		outer-pos = 434,0
-		inner-size = 387x459
-		inner-pos = 10,10
-		screen-size = 1920x1128
 	elem "tab2"
 		type = TAB
 		pos = 0,0
@@ -1844,12 +1847,18 @@ window "deathnote"
 		size = 300x477
 		anchor1 = -1,-1
 		anchor2 = -1,-1
+		background-color = none
 		is-visible = false
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Death Note"
 		statusbar = false
 		can-minimize = false
 		can-resize = false
+		outer-size = 322x533
+		outer-pos = 434,0
+		inner-size = 300x477
+		inner-pos = 11,45
+		screen-size = 1920x1128
 	elem "button1"
 		type = BUTTON
 		pos = 0,0
@@ -1952,6 +1961,11 @@ window "ignorelist"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
+		outer-size = 220x244
+		outer-pos = 434,0
+		inner-size = 200x224
+		inner-pos = 10,10
+		screen-size = 1920x1128
 	elem "button69"
 		type = BUTTON
 		pos = 144,0
@@ -1959,6 +1973,7 @@ window "ignorelist"
 		anchor1 = 100,0
 		anchor2 = -1,-1
 		text-color = #ffffff
+		background-color = none
 		border = line
 		saved-params = "is-checked"
 		text = "Rem"
@@ -1970,6 +1985,7 @@ window "ignorelist"
 		anchor1 = 0,0
 		anchor2 = -1,-1
 		text-color = #ffffff
+		background-color = none
 		border = line
 		saved-params = "is-checked"
 		text = "Add"
@@ -2042,41 +2058,6 @@ window "infoer"
 		tab-background-color = #000000
 		tab-font-family = "Franklin Gothic Medium"
 
-window "ingame"
-	elem "ingame"
-		type = MAIN
-		pos = 434,0
-		size = 99x96
-		anchor1 = -1,-1
-		anchor2 = -1,-1
-		background-color = #000000
-		saved-params = "pos;size;is-minimized;is-maximized"
-		titlebar = false
-		statusbar = false
-		can-close = false
-		can-minimize = false
-		can-resize = false
-		is-pane = true
-		outer-size = 119x116
-		outer-pos = 434,0
-		inner-size = 99x96
-		inner-pos = 10,10
-		screen-size = 1920x1128
-	elem "button5"
-		type = BUTTON
-		pos = 0,0
-		size = 96x96
-		anchor1 = 0,0
-		anchor2 = 17,100
-		font-family = "Franklin Gothic Medium"
-		text-color = #c8c8c8
-		background-color = #a3a3a3
-		border = line
-		saved-params = "is-checked"
-		text = "Run / Walk"
-		command = "Run"
-		is-flat = true
-
 window "keypad"
 	elem "keypad"
 		type = MAIN
@@ -2092,6 +2073,11 @@ window "keypad"
 		statusbar = false
 		can-minimize = false
 		can-resize = false
+		outer-size = 478x643
+		outer-pos = 434,0
+		inner-size = 456x587
+		inner-pos = 11,45
+		screen-size = 1920x1128
 	elem "padout"
 		type = OUTPUT
 		pos = 0,464
@@ -2562,8 +2548,8 @@ window "pdawin"
 window "playerprofile"
 	elem "playerprofile"
 		type = MAIN
-		pos = 434,0
-		size = 383x265
+		pos = 577,293
+		size = 717x465
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		background-color = #000000
@@ -2573,17 +2559,17 @@ window "playerprofile"
 		statusbar = false
 		can-minimize = false
 		can-resize = false
-		outer-size = 405x321
-		outer-pos = 434,0
-		inner-size = 383x265
+		outer-size = 739x521
+		outer-pos = 577,293
+		inner-size = 717x465
 		inner-pos = 11,45
 		screen-size = 1920x1128
 	elem "label22"
 		type = LABEL
 		pos = 200,21
 		size = 184x20
-		anchor1 = -1,-1
-		anchor2 = -1,-1
+		anchor1 = 28,5
+		anchor2 = 54,9
 		text-color = #ff0000
 		background-color = none
 		is-transparent = true
@@ -2657,7 +2643,7 @@ window "playerprofile"
 	elem "aProfile"
 		type = OUTPUT
 		pos = 0,40
-		size = 383x224
+		size = 717x424
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		text-color = #ffffff
@@ -2956,11 +2942,6 @@ window "votingsys"
 		statusbar = false
 		can-minimize = false
 		can-resize = false
-		outer-size = 579x446
-		outer-pos = 434,0
-		inner-size = 557x390
-		inner-pos = 11,45
-		screen-size = 1920x1128
 	elem "label14"
 		type = LABEL
 		pos = 0,-1
@@ -2980,7 +2961,6 @@ window "votingsys"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		font-family = "Comic Sans MS"
-		background-color = none
 		saved-params = "is-checked"
 		text = "Ghost"
 		command = "voteghost"
@@ -2992,7 +2972,6 @@ window "votingsys"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		font-family = "Comic Sans MS"
-		background-color = none
 		saved-params = "is-checked"
 		text = "Death Note"
 		command = "votedeathnote"
@@ -3006,7 +2985,6 @@ window "votingsys"
 		font-family = "Comic Sans MS"
 		font-size = 14
 		text-color = #ffffff
-		background-color = none
 		is-transparent = true
 		saved-params = ""
 		text = "Please vote for a mode."
@@ -3017,7 +2995,6 @@ window "votingsys"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		font-family = "Comic Sans MS"
-		background-color = none
 		saved-params = "is-checked"
 		text = "Vampire"
 		command = "voteVampire"
@@ -3029,7 +3006,6 @@ window "votingsys"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		font-family = "Comic Sans MS"
-		background-color = none
 		saved-params = "is-checked"
 		text = "Secret"
 		command = "votesecret"
@@ -3041,7 +3017,6 @@ window "votingsys"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		font-family = "Comic Sans MS"
-		background-color = none
 		saved-params = "is-checked"
 		text = "Zombie"
 		command = "votezombie"
@@ -3053,7 +3028,6 @@ window "votingsys"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		font-family = "Comic Sans MS"
-		background-color = none
 		saved-params = "is-checked"
 		text = "Witch"
 		command = "votewitch"
@@ -3065,7 +3039,6 @@ window "votingsys"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		font-family = "Comic Sans MS"
-		background-color = none
 		saved-params = "is-checked"
 		text = "Doppeganger"
 		command = "votedoppelganger"
@@ -3077,7 +3050,6 @@ window "votingsys"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		font-family = "Comic Sans MS"
-		background-color = none
 		saved-params = "is-checked"
 		text = "Normal"
 		command = "votenormal"
@@ -3215,14 +3187,9 @@ window "wbrowse"
 		size = 640x480
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		is-visible = false
 		saved-params = "pos;size;is-minimized;is-maximized"
 		statusbar = false
-		outer-size = 662x536
-		outer-pos = 434,0
-		inner-pos = 11,45
-		screen-size = 1920x1128
 	elem "webbrowse"
 		type = BROWSER
 		pos = 0,0
@@ -3239,29 +3206,31 @@ window "words"
 	elem "words"
 		type = MAIN
 		pos = 434,0
-		size = 224x16
+		size = 224x32
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		background-color = #000000
 		is-visible = false
-		saved-params = "pos;size;is-minimized;is-maximized"
+		border = line
+		saved-params = "pos;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
 		can-close = false
 		can-minimize = false
 		can-resize = false
 		is-pane = true
-		outer-size = 244x36
+		transparent-color = #000000
+		outer-size = 244x52
 		outer-pos = 434,0
-		inner-size = 224x16
+		inner-size = 224x32
 		inner-pos = 10,10
 		screen-size = 1920x1128
 	elem "button31"
 		type = BUTTON
 		pos = 168,0
-		size = 56x16
-		anchor1 = -1,-1
-		anchor2 = -1,-1
+		size = 56x32
+		anchor1 = 75,0
+		anchor2 = 100,100
 		text-color = #ffffff
 		background-color = #000000
 		border = line
@@ -3273,9 +3242,9 @@ window "words"
 	elem "button30"
 		type = BUTTON
 		pos = 112,0
-		size = 56x16
-		anchor1 = -1,-1
-		anchor2 = -1,-1
+		size = 56x32
+		anchor1 = 50,0
+		anchor2 = 75,100
 		text-color = #ffffff
 		background-color = #000000
 		border = line
@@ -3287,9 +3256,9 @@ window "words"
 	elem "button29"
 		type = BUTTON
 		pos = 56,0
-		size = 56x16
-		anchor1 = -1,-1
-		anchor2 = -1,-1
+		size = 56x32
+		anchor1 = 25,0
+		anchor2 = 50,100
 		text-color = #ffffff
 		background-color = #000000
 		border = line
@@ -3301,9 +3270,9 @@ window "words"
 	elem "button17"
 		type = BUTTON
 		pos = 0,0
-		size = 56x16
-		anchor1 = -1,-1
-		anchor2 = -1,-1
+		size = 56x32
+		anchor1 = 0,0
+		anchor2 = 25,100
 		text-color = #ffffff
 		background-color = #000000
 		border = line

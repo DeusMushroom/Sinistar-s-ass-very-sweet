@@ -200,7 +200,7 @@ mob/player/
 		if(src.client.address in IPBans)
 			src << "<font color=red>You're banned from the game."
 			del src
-		src.client.command_text="Chat "
+		src.client.command_text="OOC "
 		var/list/banparams=new/list()
 		var/list/banparams2=new/list()
 		for(var/m in BanList)

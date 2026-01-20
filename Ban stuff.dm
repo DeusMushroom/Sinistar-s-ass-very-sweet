@@ -21,7 +21,7 @@ mob
 			//src.verbs-=typesof(/mob/watcher/verb/)
 			src.client.verbs-=typesof(/mob/watcher/verb/)
 		src.name=src.key
-		src.client.command_text="Chat "
+		src.client.command_text="OOC "
 	//	src.client.verbs+=typesof(/mob/watcher/verb/)
 		winshow(src,"pdawin",0)
 		winshow(src,"DeathNoteWin",0)
