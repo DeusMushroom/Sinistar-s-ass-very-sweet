@@ -579,6 +579,10 @@ mob/verb
 		for(var/mob/A in world)
 			if(A.client)
 				usr << "[A.key]"
+				var player_num=0
+				if(A.key)
+					player_num+=1
+				usr << "<b>Total Players: [player_num]</b>"
 	OOC(T as text)
 		//set name="OOC:"
 		if(usr.key in mutelist)

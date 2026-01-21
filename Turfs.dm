@@ -3253,12 +3253,13 @@ mob/Bump(atom/A)
 		var/obj/O=src.pulling
 		O.loc=src.loc
 	..()
-mob/var/move_speed=2
+mob/var/move_speed=6 // player speed
+mob/var/run_speed=3 //
 mob/Move()
 	if(src.barrier==1)return 0
 	if(src.playing==1)
-		if("[rand(1,9)]"=="[rand(1,14)]"&&src.invisibility==0)
-			soundmob(src, 10, 'footsteps.wav', TRUE)
+		if(src.invisibility==0)
+			range(usr,8) << sound('footsteps.wav')
 		if(src.koed==0)
 			for(var/mob/A in view())
 				if(A.pulling==src)
@@ -3313,18 +3314,21 @@ mob/Move()
 			var/image/o=new/obj/bloodstep
 			o.loc=src.loc
 			o.dir=src.dir
-	if(src.running&&src.move_speed>3)
-		src.frozen=1
-		spawn(src.move_speed)src.frozen=0
-	if(!src.running&&src.zombie==0)
-		src.frozen=1
-		spawn(src.move_speed)src.frozen=0
-	else if(src.zombie==1)
-		src.frozen=1
-		spawn(3)src.frozen=0
-	else
-		src.stamina-=1
-	return ..()
+		if(src.running==1)
+			src.frozen=1
+			spawn(src.run_speed)src.frozen=0
+		else 	
+			src.frozen=1
+			spawn(src.move_speed)src.frozen=0
+		if(!src.running&&src.zombie==0)
+			src.frozen=1
+			spawn(src.move_speed)src.frozen=0
+		else if(src.zombie==1)
+			src.frozen=1
+			spawn(6)src.frozen=0
+		else
+			src.stamina-=1
+		return ..()
 obj/var/bloodweapon=0
 proc
 	WeaponEquip(var/mob/A,var/obj/weapons/I)

@@ -60,11 +60,15 @@ proc
 					n << "[n.fightfont][M] [O.msgtake] [E] with their [filterbloody(O.name)]!"
 				_message(n,"[n.fightfont][M] [O.msgtake] [E] with their [filterbloody(O.name)]!")
 			if(O.type==/obj/weapons/Billhook&&missed==0)
-				soundmob(E, 7, 'audio/billhook.wav', TRUE)
+				range(8,usr) << sound('audio/billhook.wav')
 			if(O.type==/obj/weapons/Knife&&missed==0)
-				soundmob(E, 7, 'audio/knife_stab.ogg', TRUE)
+				range(8,usr) << sound('audio/knife_stab.ogg')
 			if(O.type==/obj/weapons/Metal_Bat&&missed==0)
-				soundmob(E, 7, 'audio/bat_hit.ogg', TRUE)
+				range(8,usr) << sound('audio/bat_hit.ogg')
+			if(O.type==/obj/weapons/Bokken&&missed==0)
+				range(8,usr) << sound('audio/bat_hit.ogg')
+			if(O.type==/obj/weapons/Axe&&missed==0)
+				range(8,usr) << sound('audio/billhook.wav')
 		if(O.bloodweapon==0&&missed==0)
 			if(O.type==/obj/weapons/Knife)
 				M.underlays-='knife.dmi'
@@ -206,9 +210,15 @@ proc
 			//if(rnd==2) range(8,M) << "<b>[M] [O.msgtake] [E] with their [O.name]!</b>"
 		:nomsg
 		if(O.type==/obj/weapons/Fists)
-			soundmob(E, 7, pick(punchsounds), TRUE)
+			var R=rand(1,3)
+			if(R==1)
+				range(8,usr) << sound('audio/punch.wav')
+			if(R==2)
+				range(8,usr) << sound('audio/punch2.wav')
+			if(R==3)
+				range(8,usr) << sound('audio/punch3.wav')
 		if(O.type==/obj/weapons/Wooden_Bat)
-			soundmob(E, 7, 'audio/bat_hit.ogg', TRUE)
+			range(8,usr) << sound('audio/bat_hit.ogg')
 		E.stamina-=thedmg
 		M.stamina-=O.stamtake
 		M.canattack=0
@@ -229,7 +239,7 @@ proc
 			else
 				for(var/mob/n in range(8,M))
 					n << "[n.fightfont][M] shocks [E] with their Taser!"
-			soundmob(E, 7, 'audio/taser.wav', TRUE)
+			range(8,usr) << sound('audio/taser.wav')
 			O.painter-=1
 			if(O.painter<1)
 				M << "The battery insde the taser seems to have gone dead."
@@ -268,7 +278,7 @@ proc
 			else
 				for(var/mob/n in range(8,B))
 					n << "[n.fightfont][A] sprays [B] with their Spray Paint!"
-			soundmob(B, 7, Sprayer, TRUE)
+			range(8,usr) << sound('audio/spraying_2.wav')
 			var/icon/I='paintoverlay.dmi'
 			//if(O.paintcolor=="Red")
 			I+=rgb(O.pcolor1,O.pcolor2,O.pcolor3)

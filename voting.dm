@@ -56,7 +56,7 @@ proc/GameModePoll()
 	world << "<b><small><font color = #330066>Poll Bot</b></font><small>: Poll started, you have exactly [pollshowdelay] seconds to vote."
 	for(var/mob/M in world)
 		winshow(M,"votingsys",1)
-		winset(M,"votingsys","size=256x188")
+		winset(M,"votingsys","size=557x390")
 	spawn(polldelay)GameModePollEnd()
 proc/GameModePollEnd()
 	if(GameOn==1)

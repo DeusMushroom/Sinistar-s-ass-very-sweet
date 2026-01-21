@@ -53,12 +53,12 @@ obj/Lockable_Locker
 				if(istype(O,/obj/key))
 					if(O.tag==src.tag)
 						range(5,usr) << "[usr] unlocks the locker"
-						soundmob(usr, 5, 'door_lock.ogg', TRUE)
+						range(8,usr) << sound('door_lock.ogg')
 						locked=0
 						return
 					else
 				usr << "The locker seems to be locked.."
-				soundmob(usr, 5, 'door_locked.ogg', TRUE)
+				range(8,usr) << sound('door_locked.ogg')
 				return
 
 	verb/Lock()
@@ -74,12 +74,12 @@ obj/Lockable_Locker
 				if(O.tag==src.tag)
 					if(locked==1)
 						range(5,usr) << "[usr] unlocks the locker."
-						soundmob(usr, 5, 'door_lock.ogg', TRUE)
+						range(8,usr) << sound('door_lock.ogg')
 						locked=0
 					else
 						if(open==1)return
 						range(5,usr) << "[usr] locks the locker."
-						soundmob(usr, 5, 'door_lock.ogg', TRUE)
+						range(8,usr) << sound('door_lock.ogg')
 						locked=1
 	Click()
 		if(src in oview(1,usr))
@@ -113,7 +113,7 @@ obj/Lockable_Door
 				if(istype(O,/obj/key))
 					if(O.tag==src.tag)
 						range(5,usr) << "[usr] unlocks the door"
-						soundmob(usr, 5, 'door_lock.ogg', TRUE)
+						range(8,usr) << sound('door_lock.ogg')
 						locked=0
 						return
 			if(usr.equipname=="Axe")
@@ -121,10 +121,10 @@ obj/Lockable_Door
 				spawn(10)
 					usr.canchop=1
 				if(usr.zombie==1)
-					soundmob(usr, 8, 'audio/slamming_against.wav', TRUE)
+					range(8,usr) << sound('audio/slamming_against.wav')
 					range(5,usr) << "<b>WHAM!!!!!!</b> The sound of something slamming against the door is heard!"
 				else
-					range(5,usr) << sound('audio/axe_door.ogg')
+					range(8,usr) << sound('axe_door.ogg')
 					range(5,usr) << "<b>WHAM!!!!!!</b> The sound of an axe chopping into a door is heard!"
 				hits-=1
 				usr.canchop=0
@@ -137,7 +137,7 @@ obj/Lockable_Door
 			else
 				spawn(10) usr.canchop=1
 				usr << "The door seems to be locked.."
-				soundmob(usr, 5, 'door_locked.ogg', TRUE)
+				range(8,usr) << sound('door_lock.ogg')
 				return
 		else
 			for(var/atom/A in oview(1,src))
@@ -174,12 +174,12 @@ obj/Lockable_Door
 				if(O.tag==src.tag)
 					if(locked==1)
 						range(5,usr) << "[usr] unlocks the door."
-						soundmob(usr, 5, 'door_lock.ogg', TRUE)
+						range(8,usr) << sound('door_lock.ogg')
 						locked=0
 					else
 						if(open==1)return
 						range(5,usr) << "[usr] locks the door."
-						soundmob(usr, 5, 'door_lock.ogg', TRUE)
+						range(8,usr) << sound('door_lock.ogg')
 						locked=1
 	Click()
 		if(src in oview(1,usr))
@@ -212,7 +212,7 @@ obj/Lockable_Door_Updown
 				if(istype(O,/obj/key))
 					if(O.tag==src.tag)
 						range(5,usr) << "[usr] unlocks the door"
-						soundmob(usr, 5, 'door_lock.ogg', TRUE)
+						range(8,usr) << sound('door_lock.ogg')
 						locked=0
 						return
 			if(usr.equipname=="Axe")
@@ -221,7 +221,7 @@ obj/Lockable_Door_Updown
 				spawn(10)
 					usr.canchop=1
 				if(usr.zombie==1)
-					soundmob(usr, 8, 'audio/slamming_against.wav', TRUE)
+					range(8,usr) << sound('audio/slamming_against.wav')
 					range(5,usr) << "<b>WHAM!!!!!!</b> The sound of something slamming against the door is heard!"
 				else
 					range(5,usr) << sound('audio/axe_door.ogg')
@@ -268,12 +268,12 @@ obj/Lockable_Door_Updown
 				if(O.tag==src.tag)
 					if(locked==1)
 						range(5,usr) << "[usr] unlocks the door."
-						soundmob(usr, 5, 'door_lock.ogg', TRUE)
+						range(8,usr) << sound('door_lock.ogg')
 						locked=0
 					else
 						if(open==1)return
 						range(5,usr) << "[usr] locks the door."
-						soundmob(usr, 5, 'door_lock.ogg', TRUE)
+						range(8,usr) << sound('door_lock.ogg')
 						locked=1
 	Click()
 		if(src in oview(1,usr))
