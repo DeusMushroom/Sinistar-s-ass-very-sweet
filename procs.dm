@@ -8,57 +8,7 @@ mob/corpse
 	ai=1
 	koed=1
 	layer=OBJ_LAYER
-	verb/Push(var/mob/m in get_step(usr,usr.dir))
-		set src in oview(1)
-		if(usr.playing==0)return
-		if(usr.shinigami==1)return
-		if(usr.isGhost==1)return
-		if(usr.beatrice==1&&usr.icon_state=="butterfly")return
-		if(get_step(src,usr))
-			step(src,usr.dir,"Speed=0")
-			range(6,usr) << "[usr] shoves the [src]"
-	verb/Pull()
-		set src in oview(1)
-		set name="Drag / Stop"
-		if(usr.playing==0)return
-		if(usr.shinigami==1)return
-		if(usr.beatrice==1&&usr.icon_state=="butterfly")return
-		if(usr.pulling&&usr.pulling==src)
-			usr.pulling=null
-			usr << "You stop dragging the [src]"
-			src.pulled=0
-			return
-		else if(usr.pulling)
-			for(var/mob/M in oview(3,usr))
-				if(M.pulling==src)
-					var/rander=rand(1,3)
-					if(rander==1)
-						M.pulling=null
-						src.pulled=1
-						M << "[usr] pulls the [src] away from you."
-					else
-						usr << "You failed to pull the [src] away from [M]."
-						M << "[usr] tries to pull the [src] away from you"
-						return
-			usr.pulling=src
-			usr << "You begin dragging the [src]"
-			src.pulled=1
-			return
-		else
-			for(var/mob/M in oview(3,usr))
-				if(M.pulling==src)
-					var/rander=rand(1,3)
-					if(rander==1)
-						M.pulling=null
-						M << "[usr] pulls the [src] away from you."
-						src.pulled=1
-					else
-						usr << "You failed to pull the [src] away from [M]."
-						M << "[usr] tries to pull the [src] away from you"
-						return
-			usr.pulling=src
-			usr << "You begin dragging the [src]"
-			src.pulled=1
+	
 	verb/Search_Body()
 		///set name="Drag / Stop"
 		set src in oview(1)
