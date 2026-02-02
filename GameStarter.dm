@@ -386,7 +386,7 @@ proc/StartGame()
 		//I.layer=MOB_LAYER
 		if(I.charhaircolor != null)C.Blend(I.charhaircolor)
 		I.overlays+=C
-		I.chatavatar='speech.dmi'
+		I.chatavatar='Oi.dmi'
 		for(var/mob/n in world)
 			if(n.key in Owner&&(AntagNotices==1))
 				n << "<font color=red>Admin Notice: [I]([I.key]) is the Ghost"
@@ -1185,7 +1185,7 @@ proc
 			//I.layer=MOB_LAYER
 			//if(A.charhaircolor != null)I.Blend(A.charhaircolor)
 			//A.overlays+=I
-			A.chatavatar='speech.dmi'
+			A.chatavatar='Oi.dmi'
 		else
 			A.name=A.charname
 			if(A.chargender=="male")
@@ -1218,7 +1218,7 @@ proc
 			//I.layer=MOB_LAYER
 			if(A.charhaircolor != null)I.Blend(A.charhaircolor)
 			A.overlays+=I
-			A.chatavatar='speech.dmi'
+			A.chatavatar='Oi.dmi'
 	Chatbubble(mob/A)
 		var/icon/I=A.chatavatar
 		if(A.charhaircolor != null)I.Blend(A.charhaircolor)
@@ -1403,7 +1403,7 @@ proc
 			A.name="The Boy With Sunglasses"
 		Chatbubble(A,A.haircolor)
 	Chatbubble(mob/A,var/B)
-		var/icon/I='speech.dmi'
+		var/icon/I='Oi.dmi'
 		if(B=="Blonde")
 			I*=rgb(255,255,128)
 		if(B=="Green")
