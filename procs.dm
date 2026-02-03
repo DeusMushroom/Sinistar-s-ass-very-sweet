@@ -1113,17 +1113,17 @@ mob/owner/verb
 		//	ovr+=A
 		//var/N=input(usr,"Which overlay do you wish to remove?") in ovr
 		//if(N)M.overlays-=N
-	Summon_Ramiel()
+	Summon_Purple()
 		set category = "Admin"
-		var/n=alert(usr,"You're going to summon Ramiel, it is CURRENTLY IN TEST MODE, so do not over use this, and BARELY ever use it. At any rate, Spawn Ramiel?","","Yes","No")
+		var/n=alert(usr,"You're going to summon Purple, it is CURRENTLY IN TEST MODE, so do not over use this, and BARELY ever use it. At any rate, Spawn Purple?","","Yes","No")
 		if(n=="Yes")
 			if(GameOn==0)return
-			world << "<font size=3><b><font color=red>Warning!</font></b> An Angel has appeared, entering Ramiel test mode."
+			world << "<font size=3><b><font color=red>Warning!</font></b> An Angel has appeared, entering Purple test mode."
 			world << "<b>The ceiling lights explode!</b>"
 			for(var/obj/Lights/O in world)
 				O.luminosity=0
 			world << sound(null)
-			world << sound('angels.mid',1)
+			world << sound('battle3.ogg',1)
 			var/mob/ramiel/M=new
 			M.hp=400
 			M.stamina=10000
