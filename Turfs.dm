@@ -2628,7 +2628,7 @@ obj/
 		Boys
 			icon_state="boys"
 		Boys2
-			icon_state="boys2"
+			icon_state="kitch2"
 
 	Posters
 		Courtyard
