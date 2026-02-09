@@ -40,9 +40,9 @@ proc
 
 var/d111=0
 world
-	hub ="MasterBraska.PyrceHigh"
+	hub ="Exadv1.spacestation13"
 	name="Nippa High"
-	hub_password="qoqNk8OEVAz096Uy"
+	hub_password="kMZy3U5jJHSiBQj"
 	version=60
 	status={"<b>Version:</b> 2.5.7c]<BR>\[<BR><b>Game Map:</b> Default<BR><b>Game Mode:</b> Normal"}
 	mob=/mob/player
