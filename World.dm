@@ -793,10 +793,10 @@ mob/Stat()
 				HealthStatus="Deeply Wounded!"
 			if(usr.hp<21&&usr.hp>10)
 				HealthStatus="You're losing blood! You feel slower."
-				usr.move_speed=2
+				usr.move_speed=7
 			if(usr.hp<11&&usr.hp>0)
 				HealthStatus="DANGER, SEEK MEDICAL ATTENTION! You feel a lot slower."
-				usr.move_speed=3
+				usr.move_speed=9
 			stat("Stamina:","[usr.stamina]%")
 			stat("Health Status:","[HealthStatus]")
 			if(usr.currentrole=="The Doppelganger"&&usr.playing==1)
